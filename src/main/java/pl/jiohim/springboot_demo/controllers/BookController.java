@@ -9,7 +9,6 @@ import pl.jiohim.springboot_demo.repositories.BookRepository;
 @Controller
 public class BookController {
 
-
     private final BookRepository bookRepository;
 
     public BookController(BookRepository bookRepository) {
@@ -17,7 +16,7 @@ public class BookController {
     }
 
     @RequestMapping("/books")
-    public String getBooks(Model model) {
+    public String getBooks(Model model){
 
         model.addAttribute("books", bookRepository.findAll());
 
